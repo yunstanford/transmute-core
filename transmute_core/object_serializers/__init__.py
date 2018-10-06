@@ -1,9 +1,6 @@
 from .compound_serializer import ListSerializer
 from .cattrs_serializer import CattrsSerializer
 from .schematics_serializer import SchematicsSerializer
-from .compound_serializer import (
-    ListSerializer
-)
 from .interface import ObjectSerializer
 from .serializer_set import ObjectSerializerSet
 from .primitive_serializer import (
@@ -13,7 +10,7 @@ from .primitive_serializer import (
     StringSerializer,
     BoolSerializer,
     DateTimeSerializer,
-    DecimalSerializer
+    DecimalSerializer,
 )
 
 
@@ -26,8 +23,9 @@ DEFAULT_SERIALIZER_LIST = [
     FloatSerializer(),
     DateTimeSerializer(),
     DecimalSerializer(),
-    CattrsSerializer()
+    CattrsSerializer(),
 ]
+
 
 def get_default_object_serializer_set():
     s = ObjectSerializerSet(DEFAULT_SERIALIZER_LIST)
